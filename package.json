@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "advanced hangman by using constructor",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangmeeso/advanced-hangman.git"
+  },
+  "author": "Meeso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangmeeso/advanced-hangman/issues"
+  },
+  "homepage": "https://github.com/yangmeeso/advanced-hangman#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
