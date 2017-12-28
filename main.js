@@ -8,11 +8,3 @@ var letterJS = require("./letter.js");
 var wordJS = require("./word.js");
 
 
-
-/* Global Variables */
-var wordsArray = ["oregon", "homework", "javascript"];
-var userGuess = "";
-var blanks = 0;
-var underscores = [];
-
-
