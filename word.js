@@ -3,28 +3,79 @@
 var letterJS = require("./letter.js");
 
 
+// console.log(letterfc)
 
-function word(answer) {
-    var letterCheck = false;
-    for (var j = 0; j < blanks; j++) {
-        if (chosenWords[j] === answer) {
-            letterCheck = true;
-        }
-    }
+// var input = process.argv[2];
 
-    if (letterCheck === true) {
-        for (var u = 0; u < blanks; u++) {
-            if (chosenWords[u] === answer) {
-                underscores[u] = answer;
-                console.log(blanks);
+var checkWords = function () {
+
+    this.checking = function (answer) {
+
+        var letterfc = new letterJS();
+
+        letterfc.startGame();
+
+        // var letterCheck = false;
+        var chosenWords = letterfc.chosenWords;
+        var blanks = letterfc.blanks;
+    
+        // console.log(chosenWords)
+    
+        for (var j = 0; j < chosenWords.length; j++) {
+            // console.log(chosenWords);
+            if (chosenWords[j] === answer) {
+                // letterCheck = true;
+                blanks[j] = answer;
+                console.log(blanks)
             }
         }
-    }
 
-    else  {
-        numberGuesses--;
-        console.log(numberGuesses + "guesses remaining.");
+        this.chosenWords = chosenWords;
+        this.blanks = blanks;
     }
 }
 
+module.exports = checkWords;
 
+
+// console.log(input)
+
+// function word(answer) {
+//     var letterCheck = false;
+//     var chosenWords = letterfc.chosenWords;
+//     var blanks = letterfc.blanks;
+
+//     console.log(chosenWords)
+
+//     for (var j = 0; j < chosenWords.length; j++) {
+//         // console.log(chosenWords);
+//         if (chosenWords[j] === answer) {
+//             // letterCheck = true;
+//             blanks[j] = answer;
+//             console.log(blanks)
+//         }
+//     }
+// }
+
+// word(input)
+    // console.log(letterfc.blanks)
+
+    // if (letterCheck === true) {
+    //     for (var u = 0; u < letterfc.blanks; u++) {
+    //         if (letterfc.chosenWords[u] === answer) {
+    //             letterfc.blanks[u] = answer;
+    //             console.log(letterfc.blanks);
+    //         }
+    //     }
+    // }
+
+    // else  {
+    //     letterfc.numberGuesses--;
+    //     console.log(letterfc.numberGuesses + "guesses remaining.");
+    // }
+
+
+
+
+
+// console.log(letterfc)

@@ -4,7 +4,12 @@
 
 /* Link JSON and external scripts */
 var inquirer = require("inquirer");
-var letterJS = require("./letter.js");
+// var letterJS = require("./letter.js");
+
 var wordJS = require("./word.js");
 
+var wordFunction = new wordJS()
 
+// console.log(wordFunction.chec)
+
+wordFunction.checking("o")
